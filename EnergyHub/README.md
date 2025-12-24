@@ -11,6 +11,11 @@
 Built from scratch to understand real-world web development concepts: authentication, session management, security, and full-stack architecture.
 
 <img width="1920" height="1080" alt="Signup" src="https://github.com/user-attachments/assets/bfa3a9b0-0987-4bf5-bfe3-5994dd1bf75a" />
+<img width="1920" height="1080" alt="Signin" src="https://github.com/user-attachments/assets/023eca8d-dfae-424e-9525-e8ddbdc4965b" />
+<img width="1920" height="1080" alt="home" src="https://github.com/user-attachments/assets/ecef7945-bd54-4a93-bc53-f7f06cc3e499" />
+<img width="1920" height="1080" alt="content" src="https://github.com/user-attachments/assets/b32d9944-bb39-4bcf-b979-57689478fb4b" />
+<img width="1920" height="1080" alt="footer" src="https://github.com/user-attachments/assets/4a18857d-85fe-41c5-b8ea-33a5721828f8" />
+<img width="1920" height="1080" alt="next_page" src="https://github.com/user-attachments/assets/1a977cd6-3c89-47c6-a7bc-0f54f40a1519" />
 
 ---
 
@@ -467,4 +472,5 @@ Please consider:
 **Status:** Active Development ✅
 **Python Version:** 3.12+
 **Django Version:** 6.0+
+
 
