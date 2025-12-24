@@ -1,0 +1,227 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Stark Industries | Energy & Industrial Services</title>
+
+  <link rel="stylesheet" href="{% static 'core/font/all.css' %}">
+  <link rel="stylesheet" href="{% static 'core/css/stylem.css' %}">
+</head>
+
+<body>
+
+<!-- ================= HERO / PARALLAX ================= -->
+<header id="top" aria-label="Hero section">
+  <img src="{% static 'core/image/bg.jpg' %}" id="bg" alt="">
+  <h1 id="text">
+    Stark <i class="fa-brands fa-studiovinari light1"></i> Industries
+  </h1>
+  <img src="{% static 'core/image/man.png' %}" id="man" alt="">
+  <img src="{% static 'core/image/clouds_1.png' %}" id="clouds_1" alt="">
+  <img src="{% static 'core/image/clouds_2.png' %}" id="clouds_2" alt="">
+  <img src="{% static 'core/image/mountain_left.png' %}" id="mountain_left" alt="">
+  <img src="{% static 'core/image/mountain_right.png' %}" id="mountain_right" alt="">
+</header>
+
+<!-- ================= MAIN ================= -->
+<main>
+
+<!-- ================= NAV + INTRO ================= -->
+<section class="section-intro">
+
+  <div class="brand-header">
+    <h2><i class="fa-brands fa-studiovinari"></i> Stark Exports</h2>
+
+    <nav class="main-nav" aria-label="Primary navigation">
+      <ul>
+        <li><a href="{% url 'main' %}">Home</a></li>
+        <li><a href="{% url 'energy' %}">Energy</a></li>
+        <li><a href="{% url 'gas' %}">Gas</a></li>
+        <li><a href="{% url 'power' %}">Power</a></li>
+        <li><a href="{% url 'sustainability' %}">Sustainability</a></li>
+        <li><a href="{% url 'resources' %}">Resources</a></li>
+        <li><a href="{% url 'contact' %}">Contact</a></li>
+        <li><a href="{% url 'support' %}">Support</a></li>
+      </ul>
+    </nav>
+
+    <form method="POST" action="{% url 'logout' %}">
+      {% csrf_token %}
+      <button type="submit" class="logout-btn">Logout</button>
+    </form>
+  </div>
+
+  <div class="intro-link">
+    <a href="#services">Our Services <span></span></a>
+  </div>
+
+  <article class="service-text">
+    <h3>Crude Oil & Refined Products</h3>
+    <p>
+      We specialize in the extraction, processing, and global export of crude oil
+      and refined petroleum products, adhering to international quality and safety
+      standards.
+    </p>
+  </article>
+
+  <article class="service-text">
+    <h3>Gas Refining & Distribution</h3>
+    <p>
+      Our gas infrastructure supports large-scale refining and distribution,
+      enabling reliable energy supply across industrial and commercial sectors.
+    </p>
+  </article>
+
+  <article class="service-text">
+    <h3>Power Generation</h3>
+    <p>
+      From thermal plants to integrated power solutions, we deliver stable and
+      scalable energy systems for modern infrastructure.
+    </p>
+  </article>
+
+  <article class="service-text">
+    <h3>Thermal Energy Plants</h3>
+    <p>
+      We operate advanced thermal plants engineered for efficiency, sustainability,
+      and long-term performance.
+    </p>
+  </article>
+
+</section>
+
+<!-- ================= SERVICES GRID ================= -->
+<section id="services" class="content">
+
+  <div class="section-title">
+    <p>Our Capabilities <span></span></p>
+  </div>
+
+  <div class="service-grid">
+
+    <div class="card" id="energy">
+      <p>Oil <span>Extraction</span></p>
+    </div>
+
+    <div class="card">
+      <p>Petroleum <span>Processing</span></p>
+    </div>
+
+    <div class="card" id="gas">
+      <p>Diesel <span>Refining</span></p>
+    </div>
+
+    <div class="card">
+      <p>Natural <span>Gas</span></p>
+    </div>
+
+    <div class="card" id="power">
+      <p>Power <span>Generation</span></p>
+    </div>
+
+    <div class="card">
+      <p>Energy <span>Infrastructure</span></p>
+    </div>
+
+    <div class="card" id="resources">
+      <p>Resource <span>Management</span></p>
+    </div>
+
+    <div class="card">
+      <p>Global <span>Exports</span></p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= INFORMATION ================= -->
+<section class="info-section">
+  <p>
+    Stark Industries operates at the intersection of innovation and energy
+    infrastructure, delivering solutions that power industries worldwide.
+  </p>
+
+  <p>
+    Our commitment to engineering excellence, sustainability, and global
+    compliance positions us as a trusted partner in the energy sector.
+  </p>
+</section>
+
+<section class="info-highlight">
+  <p>
+    We invest continuously in cleaner technologies and operational efficiency
+    to meet the evolving demands of global energy markets.
+  </p>
+</section>
+
+<!-- ================= BACK TO TOP ================= -->
+<section class="back-top">
+  <a href="#top">
+    Back to Top <i class="fa-solid fa-arrow-up"></i>
+  </a>
+</section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+
+  <div class="foot-about">
+    <h2>
+      <span>Stark Industries</span><br>
+      Engineering the future of energy through innovation,
+      responsibility, and global expertise.
+    </h2>
+  </div>
+
+  <div class="foot-links">
+    <ul>
+      <li><strong>Industries</strong></li>
+      <li>Oil & Gas</li>
+      <li>Power</li>
+      <li>Infrastructure</li>
+      <li>Sustainability</li>
+    </ul>
+
+    <ul>
+      <li><strong>Company</strong></li>
+      <li>About Us</li>
+      <li>Careers</li>
+      <li>Contact</li>
+      <li>Insights</li>
+    </ul>
+
+    <ul>
+      <li><strong>Support</strong></li>
+      <li>Help Center</li>
+      <li>Compliance</li>
+      <li>Privacy Policy</li>
+      <li>Terms</li>
+    </ul>
+  </div>
+
+  <div class="subscribe">
+    <p>Subscribe for Updates <i class="fa-solid fa-envelope"></i></p>
+    <form>
+      <input type="email" placeholder="Enter your email" required>
+      <button type="submit">Submit</button>
+    </form>
+
+    <div class="social-icons">
+      <i class="fa-brands fa-facebook"></i>
+      <i class="fa-brands fa-twitter"></i>
+      <i class="fa-brands fa-instagram"></i>
+    </div>
+  </div>
+
+</footer>
+
+<div class="copyright">
+  <h5>© 2025 Stark Industries Inc. All rights reserved.</h5>
+</div>
+
+<script src="{% static 'core/js/index.js' %}"></script>
+</body>
+</html>

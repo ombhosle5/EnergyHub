@@ -1,0 +1,92 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Gas Solutions | Stark Industries{% endblock %}
+
+{% block breadcrumb %}
+<span> / </span>
+<a href="{% url 'gas' %}">Gas</a>
+{% endblock %}
+
+{% block content %}
+
+<section class="hero-service">
+    <div class="hero-content">
+        <h1>Natural Gas Solutions</h1>
+        <p>Reliable gas infrastructure for a sustainable future</p>
+    </div>
+</section>
+
+<section class="service-overview">
+    <div class="container">
+        <h2>Gas Refining & Distribution</h2>
+        <p>
+            Our gas infrastructure supports large-scale refining and distribution, 
+            enabling reliable energy supply across industrial and commercial sectors. 
+            With state-of-the-art facilities and safety protocols, we ensure consistent 
+            energy delivery worldwide.
+        </p>
+    </div>
+</section>
+
+<section class="services-grid">
+    <div class="container">
+        <h2>Gas Services</h2>
+        <div class="grid">
+            <div class="service-card">
+                <i class="fa-solid fa-wind"></i>
+                <h3>Natural Gas Extraction</h3>
+                <p>Advanced drilling and extraction technologies</p>
+            </div>
+            <div class="service-card">
+                <i class="fa-solid fa-droplet"></i>
+                <h3>Gas Refining</h3>
+                <p>Liquefaction and processing for international markets</p>
+            </div>
+            <div class="service-card">
+                <i class="fa-solid fa-pipes"></i>
+                <h3>Pipeline Infrastructure</h3>
+                <p>Safe and efficient distribution networks</p>
+            </div>
+            <div class="service-card">
+                <i class="fa-solid fa-check-circle"></i>
+                <h3>Quality Assurance</h3>
+                <p>Rigorous testing and compliance standards</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="statistics">
+    <div class="container">
+        <h2>Gas Industry Metrics</h2>
+        <div class="stats-grid">
+            <div class="stat-card">
+                <h3>250+</h3>
+                <p>Industrial Clients</p>
+            </div>
+            <div class="stat-card">
+                <h3>100+</h3>
+                <p>Distribution Points</p>
+            </div>
+            <div class="stat-card">
+                <h3>24/7</h3>
+                <p>Operations</p>
+            </div>
+            <div class="stat-card">
+                <h3>99.8%</h3>
+                <p>Uptime</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cta-section">
+    <div class="container">
+        <h2>Need Gas Solutions?</h2>
+        <p>Our experts are ready to help</p>
+        <a href="{% url 'contact' %}" class="cta-btn">Contact Us</a>
+    </div>
+</section>
+
+{% endblock %}

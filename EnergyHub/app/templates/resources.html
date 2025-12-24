@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Resources | Stark Industries{% endblock %}
+
+{% block breadcrumb %}
+<span> / </span>
+<a href="{% url 'resources' %}">Resources</a>
+{% endblock %}
+
+{% block content %}
+
+<section class="hero-service">
+    <div class="hero-content">
+        <h1>Resource Management</h1>
+        <p>Global expertise in energy resource optimization</p>
+    </div>
+</section>
+
+<section class="service-overview">
+    <div class="container">
+        <h2>Managing Global Resources</h2>
+        <p>
+            Our resource management approach combines cutting-edge technology 
+            with sustainable practices to maximize efficiency and minimize waste. 
+            We operate in 45+ countries with proven expertise.
+        </p>
+    </div>
+</section>
+
+<section class="services-grid">
+    <div class="container">
+        <h2>Resource Management Services</h2>
+        <div class="grid">
+            <div class="service-card">
+                <i class="fa-solid fa-map"></i>
+                <h3>Global Operations</h3>
+                <p>Operations across 45+ countries worldwide</p>
+            </div>
+            <div class="service-card">
+                <i class="fa-solid fa-database"></i>
+                <h3>Data Analytics</h3>
+                <p>AI-driven insights for resource optimization</p>
+            </div>
+            <div class="service-card">
+                <i class="fa-solid fa-chain"></i>
+                <h3>Supply Chain</h3>
+                <p>Transparent and efficient logistics networks</p>
+            </div>
+            <div class="service-card">
+                <i class="fa-solid fa-certificate"></i>
+                <h3>Compliance</h3>
+                <p>Full regulatory and certification adherence</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="statistics">
+    <div class="container">
+        <h2>Resource Metrics</h2>
+        <div class="stats-grid">
+            <div class="stat-card">
+                <h3>45+</h3>
+                <p>Countries</p>
+            </div>
+            <div class="stat-card">
+                <h3>1000+</h3>
+                <p>Resource Sites</p>
+            </div>
+            <div class="stat-card">
+                <h3>10B+</h3>
+                <p>Daily Capacity</p>
+            </div>
+            <div class="stat-card">
+                <h3>100%</h3>
+                <p>Compliance</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

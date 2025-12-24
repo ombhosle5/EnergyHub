@@ -1,0 +1,98 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Support | Stark Industries{% endblock %}
+
+{% block breadcrumb %}
+<span> / </span>
+<a href="{% url 'support' %}">Support</a>
+{% endblock %}
+
+{% block content %}
+
+<section class="hero-service">
+    <div class="hero-content">
+        <h1>Customer Support</h1>
+        <p>Find answers and get help when you need it</p>
+    </div>
+</section>
+
+<section class="faq-section">
+    <div class="container">
+        <h2>Frequently Asked Questions</h2>
+        
+        <div class="faq-grid">
+            <div class="faq-item">
+                <h3>What are your operating hours?</h3>
+                <p>We operate 24/7 with dedicated support teams available round the clock.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>How do I place an order?</h3>
+                <p>Contact our sales team directly via email or phone. We'll guide you through the process.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>What is your delivery timeline?</h3>
+                <p>Delivery times vary based on location and order size. We'll provide estimates after confirmation.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Do you offer customized solutions?</h3>
+                <p>Yes! Our team specializes in creating custom energy solutions for specific needs.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>What safety standards do you follow?</h3>
+                <p>We comply with ISO, OSHA, and international safety standards across all operations.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>How can I track my shipment?</h3>
+                <p>Contact our customer service team with your order number for real-time tracking.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="support-options">
+    <div class="container">
+        <h2>Support Options</h2>
+        
+        <div class="options-grid">
+            <div class="option-card">
+                <i class="fa-solid fa-headset"></i>
+                <h3>Live Chat</h3>
+                <p>Chat with our support team in real-time</p>
+            </div>
+
+            <div class="option-card">
+                <i class="fa-solid fa-phone"></i>
+                <h3>Phone Support</h3>
+                <p>Call us at +1 (555) 123-4567</p>
+            </div>
+
+            <div class="option-card">
+                <i class="fa-solid fa-envelope"></i>
+                <h3>Email Support</h3>
+                <p>support@starkindustries.com</p>
+            </div>
+
+            <div class="option-card">
+                <i class="fa-solid fa-ticket"></i>
+                <h3>Ticket System</h3>
+                <p>Submit support tickets for tracking</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cta-section">
+    <div class="container">
+        <h2>Still Need Help?</h2>
+        <p>Contact our support team directly</p>
+        <a href="{% url 'contact' %}" class="cta-btn">Contact Support</a>
+    </div>
+</section>
+
+{% endblock %}

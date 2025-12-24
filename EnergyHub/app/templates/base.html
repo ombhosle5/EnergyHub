@@ -1,0 +1,156 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Stark Industries{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'core/css/stylem.css' %}">
+    <link rel="stylesheet" href="{% static 'core/css/service-pages.css' %}">
+    <link rel="stylesheet" href="{% static 'core/font/all.css' %}">
+</head>
+<body>
+    <!-- ================= NAVIGATION ================= -->
+    <nav class="main-nav" aria-label="Primary navigation">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2><i class="fa-brands fa-studiovinari"></i> Stark Industries</h2>
+            </div>
+            <ul class="nav-links">
+                <li><a href="{% url 'main' %}" class="{% if request.resolver_match.url_name == 'main' %}active{% endif %}">Home</a></li>
+                <li><a href="{% url 'energy' %}" class="{% if request.resolver_match.url_name == 'energy' %}active{% endif %}">Energy</a></li>
+                <li><a href="{% url 'gas' %}" class="{% if request.resolver_match.url_name == 'gas' %}active{% endif %}">Gas</a></li>
+                <li><a href="{% url 'power' %}" class="{% if request.resolver_match.url_name == 'power' %}active{% endif %}">Power</a></li>
+                <li><a href="{% url 'sustainability' %}" class="{% if request.resolver_match.url_name == 'sustainability' %}active{% endif %}">Sustainability</a></li>
+                <li><a href="{% url 'resources' %}" class="{% if request.resolver_match.url_name == 'resources' %}active{% endif %}">Resources</a></li>
+                <li><a href="{% url 'contact' %}" class="{% if request.resolver_match.url_name == 'contact' %}active{% endif %}">Contact</a></li>
+                <li><a href="{% url 'support' %}" class="{% if request.resolver_match.url_name == 'support' %}active{% endif %}">Support</a></li>
+            </ul>
+            <div class="nav-user">
+                <form method="POST" action="{% url 'logout' %}" class="logout-form">
+                    {% csrf_token %}
+                    <button type="submit" class="logout-btn">Logout</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <span class="user-greeting">Welcome, {{ user_name }}!</span>
+    
+    <!-- ================= BREADCRUMB ================= -->
+    <section class="breadcrumb">
+        <div class="breadcrumb-container">
+            <a href="{% url 'main' %}">Home</a>
+            {% block breadcrumb %}{% endblock %}
+        </div>
+    </section>
+
+    <!-- ================= PAGE CONTENT ================= -->
+    <main class="page-main">
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <!-- <footer>
+        <div class="footer-container">
+            <div class="foot-about">
+                <h2>
+                    <span>Stark Industries</span><br>
+                    Engineering the future of energy through innovation,
+                    responsibility, and global expertise.
+                </h2>
+            </div>
+
+            <div class="foot-links">
+                <ul>
+                    <li><strong>Industries</strong></li>
+                    <li><a href="{% url 'energy' %}">Oil & Gas</a></li>
+                    <li><a href="{% url 'power' %}">Power</a></li>
+                    <li><a href="{% url 'resources' %}">Infrastructure</a></li>
+                    <li><a href="{% url 'sustainability' %}">Sustainability</a></li>
+                </ul>
+
+                <ul>
+                    <li><strong>Company</strong></li>
+                    <li><a href="{% url 'main' %}">About Us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="{% url 'contact' %}">Contact</a></li>
+                    <li><a href="#">Insights</a></li>
+                </ul>
+
+                <ul>
+                    <li><strong>Support</strong></li>
+                    <li><a href="{% url 'support' %}">Help Center</a></li>
+                    <li><a href="#">Compliance</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms</a></li>
+                </ul>
+
+                <ul>
+                    <li><strong>Social</strong></li>
+                    <li><a href="#"><i class="fa-brands fa-facebook"></i> Facebook</a></li>
+                    <li><a href="#"><i class="fa-brands fa-twitter"></i> Twitter</a></li>
+                    <li><a href="#"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
+                    <li><a href="#"><i class="fa-brands fa-linkedin"></i> LinkedIn</a></li>
+                </ul>
+            </div>
+        </div> -->
+    <footer>
+
+        <div class="foot-about">
+            <h2>
+            <span>Stark Industries</span><br>
+            Engineering the future of energy through innovation,
+            responsibility, and global expertise.
+            </h2>
+        </div>
+
+        <div class="foot-links">
+            <ul>
+            <li><strong>Industries</strong></li>
+            <li><a href="{% url 'energy' %}" style="text-decoration: none; color: inherit;">Oil & Gas</li></a>
+            <li><a href="{% url 'power' %}" style="text-decoration: none; color: inherit;">Power</li></a>
+            <li><a href="{% url 'resources' %}" style="text-decoration: none; color: inherit;">Infrastructure</li></a>
+            <li><a href="{% url 'sustainability' %}" style="text-decoration: none; color: inherit;">Sustainability</li></a>
+            </ul>
+
+            <ul>
+            <li><strong>Company</strong></li>
+            <li><a href="{% url 'main' %}" style="text-decoration: none; color: inherit;">About Us</li></a>
+            <li>Careers</li>
+            <li><a href="{% url 'contact' %}" style="text-decoration: none; color: inherit;">Contact</li></a>
+            <li>Insights</li>
+            </ul>
+
+            <ul>
+            <li><strong>Support</strong></li>
+            <li><a href="{% url 'support' %}" style="text-decoration: none; color: inherit;">Help Center</li></a>
+            <li>Compliance</li>
+            <li>Privacy Policy</li>
+            <li>Terms</li>
+            </ul>
+        </div>
+
+        <div class="subscribe">
+            <p>Subscribe for Updates <i class="fa-solid fa-envelope"></i></p>
+            <form>
+            <input type="email" placeholder="Enter your email" required>
+            <button type="submit">Submit</button>
+            </form>
+
+            <div class="social-icons">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-instagram"></i>
+            </div>
+        </div>
+
+        </footer>
+ 
+        <div class="footer-bottom">
+            <p>&copy; 2025 Stark Industries Inc. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="{% static 'core/js/index.js' %}"></script>
+</body>
+</html>

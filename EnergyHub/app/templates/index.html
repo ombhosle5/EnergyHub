@@ -1,0 +1,83 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Sign In / Sign Up</title>
+	<link rel="stylesheet" href="{% static 'core/css/style.css' %}">
+	<link rel="stylesheet" href="{% static 'core/font/all.min.css' %}">
+</head>
+<body>
+	<div class="container" id="container">
+	<div class="form-container sign-up-container">
+		<form action="{% url 'signup' %}" method="POST">
+			{% csrf_token %}
+			<h1>Create Account</h1>
+			<div class="social-container">
+				<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+				<a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+			</div>
+			
+			{% if signup_errors %}
+			<div style="color: red; margin: 10px 0;">
+				{% for field, errors in signup_errors.items %}
+				<p>{{ field }}: {{ errors }}</p>
+				{% endfor %}
+			</div>
+			{% endif %}
+			
+			<input type="text" name="name" placeholder="Name" required />
+			<input type="email" name="email" placeholder="Email" required />
+			<input type="password" name="password" placeholder="Password" required />
+			<span style="background-color: #336ba1; color: white; padding: 5px; border-radius: 6px;">for new user your email for registration</span>
+			<button type="submit">Sign Up</button>
+		</form>
+	</div>
+	<div class="form-container sign-in-container">
+		<form action="{% url 'signin' %}" method="POST">
+			{% csrf_token %}
+			<h1>Sign in</h1>
+			<div class="social-container">
+				<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+				<a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+			</div>
+			<span style="background-color: #336ba1; color: white; padding: 5px; border-radius: 6px;">already have account</span>
+			
+			{% if signin_errors %}
+				<div style="color: red; margin: 10px 0;">
+					<p>{{ signin_errors }}</p>
+				</div>
+			{% endif %}
+			
+			<input type="email" name="email" placeholder="Email" required />
+			<input type="password" name="password" placeholder="Password" required />
+			<a href="#">Forgot your password?</a>
+			<button type="submit">Sign In</button>
+		</form>
+	</div>
+	<div class="overlay-container">
+		<div class="overlay">
+			<div class="overlay-panel overlay-left">
+				<h1>Welcome Back!</h1>
+				<!-- <p>To keep connected with us please login with your personal info</p> -->
+				<button class="ghost" id="signIn">Sign In</button>
+			</div>
+			<div class="overlay-panel overlay-right">
+				<h1>Hello, Friend!</h1>
+				<p>Enter your personal details and start journey with us</p>
+				<button class="ghost" id="signUp">Sign Up</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<footer>
+	 <h5>© 2025 Stark Industries Inc. All rights reserved.</h5>
+</footer>
+
+</body>
+<script src="{% static 'core/js/script.js' %}"></script>
+</html>

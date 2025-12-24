@@ -1,0 +1,97 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Energy Solutions | Stark Industries{% endblock %}
+
+{% block breadcrumb %}
+<span> / </span>
+<a href="{% url 'energy' %}">Energy</a>
+{% endblock %}
+
+{% block content %}
+
+<!-- HERO SECTION -->
+<section class="hero-service">
+    <div class="hero-content">
+        <h1>Energy Solutions</h1>
+        <p>Powering the world through innovation and excellence</p>
+    </div>
+</section>
+
+<!-- OVERVIEW SECTION -->
+<section class="service-overview">
+    <div class="container">
+        <h2>Crude Oil & Extraction Excellence</h2>
+        <p>
+            Stark Industries specializes in the extraction, processing, and global export 
+            of crude oil and refined petroleum products. Our operations adhere to 
+            international quality and safety standards, ensuring sustainable energy 
+            production for industries worldwide.
+        </p>
+    </div>
+</section>
+
+<!-- SERVICES GRID -->
+<section class="services-grid">
+    <div class="container">
+        <h2>Our Energy Services</h2>
+        <div class="grid">
+            <div class="service-card">
+                <i class="fa-solid fa-oil-can"></i>
+                <h3>Crude Oil Extraction</h3>
+                <p>State-of-the-art extraction technologies with minimal environmental impact</p>
+            </div>
+            <div class="service-card">
+                <i class="fa-solid fa-industry"></i>
+                <h3>Refining & Processing</h3>
+                <p>Advanced processing facilities meeting international quality standards</p>
+            </div>
+            <div class="service-card">
+                <i class="fa-solid fa-globe"></i>
+                <h3>Global Distribution</h3>
+                <p>Worldwide supply chain ensuring timely delivery to customers</p>
+            </div>
+            <div class="service-card">
+                <i class="fa-solid fa-leaf"></i>
+                <h3>Sustainable Practices</h3>
+                <p>Commitment to environmental responsibility and carbon reduction</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- STATISTICS -->
+<section class="statistics">
+    <div class="container">
+        <h2>Our Impact</h2>
+        <div class="stats-grid">
+            <div class="stat-card">
+                <h3>500+</h3>
+                <p>Global Clients</p>
+            </div>
+            <div class="stat-card">
+                <h3>50M+</h3>
+                <p>Barrels Processed</p>
+            </div>
+            <div class="stat-card">
+                <h3>30+</h3>
+                <p>Years Experience</p>
+            </div>
+            <div class="stat-card">
+                <h3>99.5%</h3>
+                <p>Safety Record</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA SECTION -->
+<section class="cta-section">
+    <div class="container">
+        <h2>Ready to Partner with Us?</h2>
+        <p>Contact our energy solutions team for customized solutions</p>
+        <a href="{% url 'contact' %}" class="cta-btn">Get in Touch</a>
+    </div>
+</section>
+
+{% endblock %}

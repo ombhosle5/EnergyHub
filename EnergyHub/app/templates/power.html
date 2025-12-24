@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Power Generation | Stark Industries{% endblock %}
+
+{% block breadcrumb %}
+<span> / </span>
+<a href="{% url 'power' %}">Power</a>
+{% endblock %}
+
+{% block content %}
+
+<section class="hero-service">
+    <div class="hero-content">
+        <h1>Power Generation Solutions</h1>
+        <p>Delivering stable and scalable energy for modern infrastructure</p>
+    </div>
+</section>
+
+<section class="service-overview">
+    <div class="container">
+        <h2>Advanced Power Systems</h2>
+        <p>
+            From thermal plants to integrated power solutions, we deliver stable 
+            and scalable energy systems for modern infrastructure. Our advanced 
+            engineering ensures maximum efficiency and reliability.
+        </p>
+    </div>
+</section>
+
+<section class="services-grid">
+    <div class="container">
+        <h2>Power Services</h2>
+        <div class="grid">
+            <div class="service-card">
+                <i class="fa-solid fa-bolt"></i>
+                <h3>Thermal Power Plants</h3>
+                <p>Efficient power generation systems</p>
+            </div>
+            <div class="service-card">
+                <i class="fa-solid fa-sun"></i>
+                <h3>Renewable Energy</h3>
+                <p>Solar and wind integration solutions</p>
+            </div>
+            <div class="service-card">
+                <i class="fa-solid fa-microchip"></i>
+                <h3>Smart Grid Technology</h3>
+                <p>IoT-enabled power management systems</p>
+            </div>
+            <div class="service-card">
+                <i class="fa-solid fa-chart-line"></i>
+                <h3>Energy Optimization</h3>
+                <p>Maximize efficiency and reduce costs</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="statistics">
+    <div class="container">
+        <h2>Power Generation Stats</h2>
+        <div class="stats-grid">
+            <div class="stat-card">
+                <h3>5000+</h3>
+                <p>MW Capacity</p>
+            </div>
+            <div class="stat-card">
+                <h3>200+</h3>
+                <p>Power Plants</p>
+            </div>
+            <div class="stat-card">
+                <h3>50M+</h3>
+                <p>People Served</p>
+            </div>
+            <div class="stat-card">
+                <h3>99.9%</h3>
+                <p>Reliability</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cta-section">
+    <div class="container">
+        <h2>Power Your Operations</h2>
+        <p>Explore our comprehensive power solutions</p>
+        <a href="{% url 'contact' %}" class="cta-btn">Schedule Consultation</a>
+    </div>
+</section>
+
+{% endblock %}

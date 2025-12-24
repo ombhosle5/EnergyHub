@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Sustainability | Stark Industries{% endblock %}
+
+{% block breadcrumb %}
+<span> / </span>
+<a href="{% url 'sustainability' %}">Sustainability</a>
+{% endblock %}
+
+{% block content %}
+
+<section class="hero-service">
+    <div class="hero-content">
+        <h1>Sustainability Commitment</h1>
+        <p>Building a cleaner future through responsible energy</p>
+    </div>
+</section>
+
+<section class="service-overview">
+    <div class="container">
+        <h2>Our Environmental Vision</h2>
+        <p>
+            Stark Industries is committed to reducing our environmental footprint 
+            while meeting global energy demands. We invest continuously in cleaner 
+            technologies and operational efficiency.
+        </p>
+    </div>
+</section>
+
+<section class="services-grid">
+    <div class="container">
+        <h2>Sustainability Initiatives</h2>
+        <div class="grid">
+            <div class="service-card">
+                <i class="fa-solid fa-tree"></i>
+                <h3>Carbon Reduction</h3>
+                <p>Target 50% reduction in emissions by 2030</p>
+            </div>
+            <div class="service-card">
+                <i class="fa-solid fa-water"></i>
+                <h3>Water Management</h3>
+                <p>Responsible water usage and recycling programs</p>
+            </div>
+            <div class="service-card">
+                <i class="fa-solid fa-leaf"></i>
+                <h3>Green Technologies</h3>
+                <p>Investment in renewable and clean energy</p>
+            </div>
+            <div class="service-card">
+                <i class="fa-solid fa-users"></i>
+                <h3>Community Support</h3>
+                <p>Local development and environmental education</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="info-section">
+    <div class="container">
+        <h2>Sustainability Goals 2025-2030</h2>
+        <ul class="goals-list">
+            <li><strong>50%</strong> Reduction in CO2 emissions</li>
+            <li><strong>100%</strong> Renewable energy in operations</li>
+            <li><strong>Zero</strong> Waste to landfill</li>
+            <li><strong>$1B</strong> Investment in clean technology</li>
+        </ul>
+    </div>
+</section>
+
+<section class="cta-section">
+    <div class="container">
+        <h2>Learn More About Our Sustainability</h2>
+        <p>Download our sustainability report</p>
+        <a href="#" class="cta-btn">Download Report</a>
+    </div>
+</section>
+
+{% endblock %}
